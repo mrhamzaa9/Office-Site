@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 .main{
-    background: url("/images/hero-bg.jpg") no-repeat;
+    background: url("/Office-Site/images/hero-bg.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -175,7 +175,7 @@ li:hover{
     font-size: 18px;
 }
 .footercontainer{
-    background: url("/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
+    background: url("/Office-Site/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
@@ -183,7 +183,7 @@ li:hover{
     margin-top: -5%;
 }
 .footercontainer1{
-    background: url("/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
+    background: url("/Office-Site/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
@@ -321,7 +321,7 @@ a{
 .containerC{
     width: 100%;
     color: beige;
-    background: url(/images/20943859.jpg) center center/cover;
+    background: url(/Office-Site/images/20943859.jpg) center center/cover;
     padding: 5%;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -370,7 +370,7 @@ form input{
     -o-border-radius: 5px;
 }
 .btn3:hover{
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .footer2 img{
     display: flex ;
