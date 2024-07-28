@@ -4,9 +4,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 .main{
-    background: url("/Office-Site/images/hero-bg.jpg") no-repeat;
+    background: url("./images/hero-bg.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -15,17 +16,15 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
     width: 100%;
     background-color: rgb(41, 40, 40);
+    z-index: 1000;
 }
 header .nav{
     display: flex;
     align-items: center;
-    margin: 0 auto;
     justify-content: space-between;
-    max-width: 1000px;
-    
+    padding: 10px 30px;    
 }
 .nav .links{
     display: flex;
@@ -35,36 +34,55 @@ header .nav{
     color:rgb(248, 242, 242);
     text-decoration: none;
     transition: 0.2s ease-out;
-    -webkit-transition: 0.2s ease-out;
-    -moz-transition: 0.2s ease-out;
-    -ms-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
 }
 .nav .logo{
-    font-size: 2.1rem;
+    font-size: 28px;
     font-weight: 600;
 }
 .nav .logo span{
     color: rgba(165, 42, 42, 0.858);
 }
-li{
+.nav .nav-button button{
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    transition: .3s all ease-in-out;
+}
+.nav .nav-button button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+.menus ul li{
     color: white;
     list-style: none;
     transition: 0.2s ease;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
 }
-li:hover{
+.menus ul li:hover{
     color: rgba(165, 42, 42, 0.858);
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 .nav a:hover{
     color: rgba(165, 42, 42, 0.858);
 }
+.nav a:hover span{
+    color: rgba(255, 255, 255, 0.858);
+}
+@media screen and (max-width: 780px) {
+    .nav .menus{
+        display: none;
+    }
+}
+@media screen and (max-width: 410px){
+    header .nav{
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 .main{
-    height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 50px;
@@ -76,6 +94,22 @@ li:hover{
     white-space: nowrap;
     animation: text 4s  infinite;
     -webkit-animation: text 4s  infinite;
+    animation-play-state: running;
+}
+@media screen and (max-width: 520px) {
+    .main{
+        padding: 0% 10px;
+    }
+    .main .content .H1{
+        animation-play-state: paused;
+        /* white-space: wrap; */
+        margin: 5px 0;
+        color: white;
+        font-size: 30px;
+        width: 100%;
+        border: none;
+        overflow: visible;
+    }
 }
 @keyframes text{
     from{
@@ -89,6 +123,7 @@ li:hover{
     font-weight: 300;
     margin-top: 15px;
     max-width: 600px;
+    text-align: left;
 }
 .main .content{
     color: white;
@@ -96,33 +131,24 @@ li:hover{
     margin: 0;
     width: 100%;
 }
-.main .content button{
+.main .content #btn2{
     background-color: white;
     outline: none;
     border: none;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: 500;
     margin-top: 30px;
     transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
 }
-.main .content button:hover{
+.main .content #btn2:hover{
     background: rgba(165, 42, 42, 0.858); 
     color: white;
-    letter-spacing: 1px;
-    }
+    transform: scale(1.1);
+}
 .product{
     padding: 8% 0%;
-    width: 80%;
     margin: auto;
     text-align: center;
     color: chocolate;
@@ -134,22 +160,30 @@ li:hover{
     font-size: 20px;
     margin: 25px 0;
 }
+@media screen and (max-width: 700px) {
+    .row{
+        flex-wrap: wrap;
+    }
+    .col{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .product h1{
+        padding-top: 30%;
+    }
+}
 .row{
     display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-around;
+    padding: 0% 10%;
 }
 .row img{
     width: 100%;
-    height: 400px;
     border-radius: 5%;
-    -webkit-border-radius: 5%;
-    -moz-border-radius: 5%;
-    -ms-border-radius: 5%;
-    -o-border-radius: 5%;
     transition: 0.3s ease-in-out;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -ms-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
     border: 2px solid;
 }
 .row img:hover{
@@ -157,8 +191,8 @@ li:hover{
    box-shadow: 15px 10px 10px 5px rgb(73, 72, 72);
 }
 .col{
-    flex-basis: 30%;
     margin: 0px 20px;
+    text-align: left;
 }
 .col h3{
     text-align: left;
@@ -169,43 +203,97 @@ li:hover{
     color: rgb(75, 35, 35);
 }
 .col p{
-    text-align: left;
     margin-left: 0%;
+    text-align: left;
     color: gray;
     font-size: 18px;
 }
+.col button{
+    padding: 10px 50px;
+    border-radius: 30px;
+}
+.col button:hover{
+    letter-spacing: 0px;
+    color: white;
+}
 .footercontainer{
-    background: url("/Office-Site/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
-    padding: 10px 0px;  
-    margin-top: -5%;
+    padding: 5% 0px;  
+    position: relative;
+    z-index: 1;
+    background-color: black;
 }
+.footercontainer li{
+    padding: 10px 0;
+}
+.footercontainer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url("./images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .4;
+}
+
 .footercontainer1{
-    background: url("/Office-Site/images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
     display: flex;
     justify-content: space-evenly;
     align-items: left;
-    padding: 10px 0px;  
-    margin-top: 7%;
+    padding: 5% 0px;  
+    position: relative;
+    z-index: 1;
+    background-color: black;
 }
-.rowline{
-    flex-basis: 15%;
+.footercontainer1 li{
+    padding: 10px 0;
+}
+.footercontainer1 .rowline ul{
+    list-style: none;
+}
+.footercontainer1::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url("./images/top-view-coffee-accessories-table.jpg")  no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .4;
+}
+.footercontainer .rowline{
+    /* border: 2px solid white; */
+    padding: 0;
 }
 .rowline ul{
-    padding: 20% 0;
+    list-style: none;
+}
+.rowline ul li{
+    color: rgba(255, 255, 255, 0.678);
 }
 .rowline ul li a{
-    list-style: none;
-    color:rgb(245, 235, 235);
-    padding: 17px 25px;
+    color: rgba(255, 255, 255, 0.678);
     font-size: 21px;
     text-decoration: none;
 
 }
+.rowline ul li{
+    color: rgba(255, 255, 255, 0.678);
+    transition: .2s all ease-in-out;
+}
+.rowline ul li:hover{
+    color: white;
+    text-decoration: underline 2px white;
+    text-underline-offset: 5px;
+    letter-spacing: normal;
+    cursor: pointer;
+}
 .heading{
-    padding: 10px 0px;
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
@@ -219,10 +307,18 @@ li:hover{
 .heading:hover{
     color: chocolate;
 }
+@media screen and (max-width: 550px) {
+    .footercontainer{
+        flex-direction: column;
+        padding: 15% 30px 5% 30px;
+        justify-content: left;
+        gap: 25px;
+    }
+}
 .footer2{
-    color: gray;
+    color: rgb(241, 241, 241);
     text-align: center;
-    background-color: rgb(41, 40, 40);
+    background-color: black;
     padding: 10px 20px;
 }
 h3{
@@ -239,6 +335,9 @@ p{
     font-size: 20px;
     padding: 10px   ;
 }
+.about{
+    padding-top: 10%;
+}
 .about h1{
     text-align: center;
     font-size: 30px;
@@ -247,16 +346,38 @@ p{
 }
 .rowabout{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding: 0 10%;
+    gap: 40px;
+}
+@media screen and (max-width: 550px) {
+    .rowabout{
+        flex-wrap: wrap;
+    }
+    .colabout{
+        width: 100%;
+    }
+    .about{
+        padding-top: 30%;
+        width: 100%;
+    }
+    .rowabout{
+        padding-bottom: 10%;
+        width: 100%;
+    }
 }
 .colabout{
-    flex-basis: 30%;
+    text-align: center;
+    width: 100%;
+}
+.colimg{
+    width: 100%;
 }
 .colimg img{
-    width: 80%;
-    height: 300px;
+    width: 100%;
 }
+
 a{
     text-decoration: none;
     color: #000;
@@ -264,20 +385,11 @@ a{
 .btn2{
     background-color: white;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: 500;
     margin-top: 10px;
-    margin-right: 150px;
     transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
 }
 .btn2:hover{
     background: rgba(165, 42, 42, 0.858); 
@@ -287,94 +399,22 @@ a{
 .btn1{
     background-color: white;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     font-weight: 500;
     margin-top: 30px;
     margin-left: 50px;
     transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
 }
 .btn1:hover{
     background: rgba(165, 42, 42, 0.858); 
     color: white;
     letter-spacing: 1px;
     }
-.aboutpg{
-    background: rgb(75, 35, 35);
-    width: 100%;
-    height: 50%;
-}
+
 .colabout p{
     color: rgb(224, 179, 123);
 }
 .colabout p:hover{
     text-shadow: 2px 2px brown;
-}
-.containerC{
-    width: 100%;
-    color: beige;
-    background: url(/Office-Site/images/20943859.jpg) center center/cover;
-    padding: 5%;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    margin-bottom: 3%;
-}
-form{
-    width: 45%;
-    margin: auto;
-   
-}
-form input{
-    border-radius: 20px ;
-    outline: none;
-    display: block;
-    background: whitesmoke;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 7px 20px;
-    border: 2px black solid;
-    -webkit-border-radius: 20px ;
-    -moz-border-radius: 20px ;
-    -ms-border-radius: 20px ;
-    -o-border-radius: 20px ;
-}
-.button{
-    display: flex;
-    justify-content: space-around;
-
-}
-.btn3{
-    padding: 5px;
-    width: 75px;
-     height: 30px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border: 2px solid burlywood;
-    border-radius: 5px;
-    background: rgb(132, 56, 2);
-    color: aliceblue;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-.btn3:hover{
-    letter-spacing: 1px;
-}
-.footer2 img{
-    display: flex ;
-    align-items: center;
-    justify-content: space-evenly;
 }
